@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phillip Madadangoma - Software Developer Portfolio">
+    <title>Phillip Madadangoma | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- True Winding Snake SVG Scrollbar -->
+    <svg id="snake-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 100" preserveAspectRatio="none">
+        <path id="snake-track" d="M10 0 Q20 10, 10 20 T10 40 T10 60 T10 80 T10 100" />
+        <path id="snake-body" d="M10 0 Q20 10, 10 20 T10 40 T10 60 T10 80 T10 100" />
+    </svg>
+
+    <!-- Code Particles Container -->
+    <div id="code-particles"></div>
+
+    <header>
+        <nav class="container nav-container">
+            <a href="#" class="logo">Phillip M.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="fluid-background parallax-bg">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+            <div class="container hero-layout parallax-fg">
+                <div class="hero-content">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="hero-title"><span class="typewriter">Phillip</span><br><span class="typewriter-delay" style="color: var(--accent);">Madadangoma</span></h1>
+                    <h2 class="hero-subtitle">Software Developer</h2>
+                    <p class="hero-bio">Specializing in Python and Web Development. Focused on building intuitive, robust applications.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary btn-vibrant">View Projects</a>
+                        <div class="social-links">
+                            <a href="https://github.com/28promad" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-btn"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/phil-mad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@08Phil_m" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-btn"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="https://github.com/28promad.png" alt="Phillip Madadangoma" class="profile-avatar profile-vibrant">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container about-grid">
+                <div class="about-content">
+                    <h2>Professional Profile</h2>
+                    <p class="lead-text">Driven Software Developer with a passion for building functional, modern applications.</p>
+                    <p>I constantly learn and apply new technologies to solve real-world problems. Whether it's crafting scalable backend logic or designing clean user interfaces, I bring dedication and a pragmatic problem-solving mindset to every commit.</p>
+                    
+                    <div class="skills-container">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Web Architecture</span>
+                        <span class="skill-tag">Git / Version Control</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>My recent technical work retrieved from GitHub.</p>
+                </div>
+                
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev-btn" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
+                    
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="projects-track">
+                            <div class="loading-spinner">
+                                <i class="fas fa-circle-notch fa-spin"></i> Fetching repositories...
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn next-btn" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="container contact-section">
+            <div class="contact-card">
+                <h2>Get in Touch</h2>
+                <p>I'm available for professional inquiries and collaborations.</p>
+                <a href="https://www.linkedin.com/in/phil-mad" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year"></span> Phillip Madadangoma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
