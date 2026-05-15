@@ -1,48 +1,44 @@
-class Node:
-    def __init__(self, value):
-        self._value = value
-        self._next = None
+def factorial(n):
+    if n == 1:return 1
+    return n * factorial(n-1)
 
-    @property
-    def value(self):
-        """Getter for value"""
-        return self._value
+def sum_n(n):
+    "return sum of all integers from 1 to n"
+    if n == 1:
+        return 1
+    return n + sum_n(n-1)
+
+def sum_of_digits(n):
+    """given an integer, return the sum of its digits"""
     
-    @value.setter
-    def value(self, value):
-        """Setter for value"""
-        self._value = value
+    tempstr = str(n)
+    # print(tempstr)
+    if len(tempstr) == 1: return int(tempstr[0])
+    return int(tempstr[0]) + sum_of_digits(int(tempstr[1:]))
 
-    @property
-    def next(self):
-        """Getter for next"""
-        return self._next
-    
-    @next.setter
-    def next(self, next_node):
-        """Setter for next"""
-        self._next = next_node
+def power(base, exp):
+    if exp == 0:return 1
+    return base * power(base, exp-1)
 
-class LinkedList:
-    def __init__(self):
-        self.head = None  # The first node in the list
+def reverse_str(text:str):
+    if len(text) == 0:
+        return ''
+    if len(text) == 1:
+        return text
+    return text[-1] + reverse_str(text[1:-1]) + text[0]
 
-    def append(self, value):
-        """Add a new node to the end of the list."""
-        new_node = Node(value)
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:  # Traverse to the end of the list
-                current = current.next
-            current.next = new_node
+def hourglass(text):
+    if len(text) == 0:return ''
+    if len(text) == 1:return text
+    return f"{text}\n{hourglass(text[:-1])}\n{text}"
 
-    def display(self):
-        """Display the values in the linked list."""
-        current = self.head
-        while current:
-            print(current.value, end=" -> ")
-            current = current.next
-        print("None")
+def main():
+    print(factorial(5))
+    print(sum_n(10))
+    print(sum_of_digits(1234))
+    print(power(2,5))
+    print(reverse_str("steak"))
+    print(hourglass("sample_text"))
 
+if __name__ == "__main__":
+    main()

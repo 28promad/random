@@ -1,0 +1,43 @@
+Recursion Practice Problems
+Level 1: Foundational
+
+    Factorial Calculation: Write a function factorial(n) to calculate n!.
+
+    Sum of Natural Numbers: Create sum_n(n) that returns the sum of all integers from 1 to n.
+
+    Sum of Digits: Given an integer, return the sum of its digits (e.g., 123 returns 6).
+
+    Power Function: Implement power(base, exp) to calculate baseexp without using the  operator.
+
+Level 2: Intermediate
+
+    String Reversal: Write a function to reverse a string recursively.
+
+    Palindrome Check: Determine if a string is a palindrome by comparing the first and last characters and recursing on the middle.
+
+    Fibonacci Sequence: Implement fib(n) to find the nth number in the sequence.
+
+        Note: Analyze the recursion tree for this problem to understand why it is inefficient without memoization.
+
+    Binary Search: Implement a recursive binary search to find a target value in a sorted array.
+
+    Euclidean Algorithm: Implement the Greatest Common Divisor (GCD) using the logic:
+    gcd(a,b)=gcd(b,a(modb))
+
+Level 3: Advanced
+
+    Flatten a Nested List: Write a function that takes a list of lists (which may contain further nested lists) and returns a single flat list.
+
+    Tower of Hanoi: Solve the puzzle for n disks, printing each move required to transfer disks from the source to the destination rod.
+
+    File System Traversal: Write a function that recursively lists all files within a directory and its subdirectories.
+
+    Generating Permutations: Given a string or list, return all possible permutations of its elements.
+
+Level 4: Complex & Backtracking
+
+    Grid Pathfinding: Given an m×n grid, find the number of unique paths from the top-left to the bottom-right, moving only right or down.
+
+    N-Queens Problem: Place n queens on an n×n chessboard such that no two queens threaten each other. This requires backtracking to "undo" choices that lead to a dead end.
+
+    Subset Sum: Determine if there is a subset of a given set of integers that sums to a specific target value.
