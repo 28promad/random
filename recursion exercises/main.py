@@ -38,7 +38,7 @@ def main():
     print(sum_of_digits(1234))
     print(power(2,5))
     print(reverse_str("steak"))
-    print(hourglass("sample_text"))
+    print(hourglass("steak"))
 
 if __name__ == "__main__":
     main()
